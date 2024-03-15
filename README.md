@@ -10,10 +10,9 @@
 - [ x ] configuração do axios
 - [ x ] integração com serviço externo
 - [ x ] implementação do swagger
-- [ ] implementação dos logs
 - [ x ] implementação do Joi
-- [ ] implementação dos mappers e dtos
 - [ ] tratamento de erros e exceções
+- [ ] implementação dos logs
 
 > ## Estrutura de Pastas
 

@@ -6,8 +6,6 @@ import { querySchema } from "../validators/client.validation";
 async function getClientsList(req: Request, res: Response): Promise<Response> {
   const query = req.query;
 
-  console.log("Query", query);
-
   const { value, error } = querySchema.validate(query);
   if (error) apiResponse(res, 400, error.details[0].message);
 
