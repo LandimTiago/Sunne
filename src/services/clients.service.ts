@@ -39,7 +39,6 @@ const clientsList = async (quantity: number) => {
   const companies: Company[] = await getCompanies(quantity);
 
   if (companies.length > 0) {
-    console.log("Resultado ta dando");
     const clientList: ClientList[] = await Promise.all(
       companies.map(async (company: Company) => {
         const personEntity = await getPersons(1);

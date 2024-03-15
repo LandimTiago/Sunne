@@ -1,0 +1,49 @@
+/clients/list:
+  get:
+    tags:
+      - Clientes
+    summary: Get CLient List
+    description: Return a clients of Company
+    parameters:
+      - in: query
+        name: quantity
+        schema:
+          type: integer
+    responses:
+      "200":
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                total:
+                  type: integer
+                  description: total of companies
+                clients:
+                  type: array
+                  description: List of Clients
+                  items:
+                    $ref: "#/components/schemas/clients"
+      "400":
+        description: Bad request
+      "500":
+        description: Internal server error
+
+components:
+  schemas:
+    clients:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        person:
+          type: object
+          properties:
+            firstname:
+              type: string
+            lastname:
+              type: string

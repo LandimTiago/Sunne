@@ -9,8 +9,8 @@
 - [ x ] implementação do Joi
 - [ x ] configuração do axios
 - [ x ] integração com serviço externo
+- [ x ] implementação do swagger
 - [ ] implementação dos mappers e dtos
-- [ ] implementação do swagger
 - [ ] tratamento de erros e exceções
 - [ ] implementação dos logs
 
@@ -74,7 +74,12 @@ desta API:
 {
   "total": 20,
   "clients": [
-    { "name": "", "email": "", "phone": "", "person": { "fullname": "" } }
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "person": { "firstname": "", "lastname": "" }
+    }
   ]
 }
 ```
