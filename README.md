@@ -1,5 +1,9 @@
 # Teste Pratico Sunne
 
+> ## Tempo de desenvolvimento
+>
+> https://wakatime.com/@1717ec21-7524-43a4-9435-caa5749a108b/projects/rewrzbhxmo?start=2024-03-09&end=2024-03-15
+
 > ## Desenvolvimento do projeto
 
 - [ x ] Estruturação das pastas
@@ -11,7 +15,7 @@
 - [ x ] integração com serviço externo
 - [ x ] implementação do swagger
 - [ x ] implementação do Joi
-- [ ] tratamento de erros e exceções
+- [ x ] tratamento de erros e exceções
 - [ ] implementação dos logs
 
 > ## Estrutura de Pastas
@@ -44,6 +48,10 @@
 /test: Contém os testes unitários e de integração para o aplicativo.
 
 ```
+
+> ## Typescript
+>
+> A escolha pelo uso do typescript se deu pela facilidade de tipagem e confiabilidade no codigo quando pronto.
 
 > ## Desafio
 

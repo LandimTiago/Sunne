@@ -2,21 +2,17 @@ import express from "express";
 
 import { rootRouter } from "./routes";
 
-import { corsConfig } from "./middleware";
+import { corsConfig, errorMiddleware } from "./middleware";
 
 import "./utils/dotenv";
-import errorHandler from "./middleware/error";
 
 const app = express();
 
 const { PORT } = process.env;
 
-app.use(express.json());
-app.use(corsConfig);
-
 app.listen(PORT, () => {
+  app.use(express.json());
+  app.use(corsConfig);
   app.use("/", rootRouter);
-
-  app.use(errorHandler);
-  console.log(`[SERVER] Server on port ${PORT}`);
+  console.info(`[SERVER] Server on port ${PORT}`);
 });

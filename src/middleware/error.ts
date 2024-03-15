@@ -1,16 +1,11 @@
 import { NextFunction, Request, Response } from "express";
-import { SanitizationError } from "../utils/sanitizations";
+import { apiResponse } from "../utils/responseApi";
 
-const errorHandler = (
-  err: any,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  const errStatus = err.statusCode || 500;
-  const errMsg = err.message || "Something went wrong";
+export const errorMiddleware = (err: unknown, res: Response): Response => {
+  if (err instanceof SyntaxError) {
+    return apiResponse(res, 400, err.message);
+  }
 
-  res.status(errStatus).json({ message: errMsg });
+  console.error("err", err);
+  return apiResponse(res, 500, "Internal server error");
 };
-
-export default errorHandler;
