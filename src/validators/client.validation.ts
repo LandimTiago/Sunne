@@ -1,9 +1,5 @@
 import Joi from "joi";
 
-const quantity = Joi.object<{
-  quantity: number;
-}>({
-  quantity: Joi.number().required(),
+export const querySchema = Joi.object({
+  quantity: Joi.number().integer().min(1).max(20).required(),
 });
-
-export const clientValidations = { quantity };

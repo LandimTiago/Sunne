@@ -5,6 +5,7 @@ import { rootRouter } from "./routes";
 import { corsConfig } from "./middleware";
 
 import "./utils/dotenv";
+import errorHandler from "./middleware/error";
 
 const app = express();
 
@@ -16,5 +17,6 @@ app.use(corsConfig);
 app.listen(PORT, () => {
   app.use("/", rootRouter);
 
+  app.use(errorHandler);
   console.log(`[SERVER] Server on port ${PORT}`);
 });

@@ -7,11 +7,11 @@
 - [ x ] configurar o CORS
 - [ x ] implementação das rotas
 - [ x ] implementação dos controllers e services
-- [ x ] implementação do Joi
 - [ x ] configuração do axios
 - [ x ] integração com serviço externo
 - [ x ] implementação do swagger
-- [ x ] implementação dos logs
+- [ ] implementação dos logs
+- [ x ] implementação do Joi
 - [ ] implementação dos mappers e dtos
 - [ ] tratamento de erros e exceções
 
