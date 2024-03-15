@@ -1,7 +1,6 @@
 import { Response } from "express";
 
 function apiResponse(res: Response, code: number, data: unknown): Response {
-  console.info(`[RESPONSE] --> Code: ${code}, Data:`, data);
   if (code >= 400 && code < 500) {
     return res.status(code).json(data);
   }
