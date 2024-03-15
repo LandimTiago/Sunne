@@ -7,29 +7,45 @@
 - [ x ] implementação das rotas
 - [ x ] implementação dos controllers e services
 - [ x ] implementação do Joi
+- [ x ] configuração do axios
+- [ x ] integração com serviço externo
 - [ ] implementação dos mappers e dtos
 - [ ] implementação do swagger
-- [ ] integração com serviço externo
 - [ ] tratamento de erros e exceções
 - [ ] implementação dos logs
 
 > ## Estrutura de Pastas
 
+```
 /src
+  /config: Contém arquivos de configuração, como conexão com banco de dados, variáveis de ambiente, etc.
 
-- /config: Contém arquivos de configuração, como conexão com banco de dados, variáveis de ambiente, etc.
-- /controllers: Contém os controladores que lidam com as requisições HTTP e retornam respostas.
-- /infra: Contém a lógica de infraestrutura, como acesso ao banco de dados, integrações com serviços externos, etc.
-- /dtos: Contém (DTOs) Data Transfer Object
-- /middleware: Contém funções de middleware que podem ser usadas para processar requisições antes de chegarem aos controladores.
-- /routes: Contém as definições de rotas, que mapeiam URLs para controladores específicos.
-- /validators: Para manter a lógica de validação separada dos controladores e modelos, especialmente se você estiver usando bibliotecas de validação como Joi ou express-validator.
-- /services: Contém a lógica de negócios que não se encaixa diretamente nos controladores ou modelos. Isso pode incluir operações complexas que envolvem múltiplos modelos ou serviços externos.
-- /utils: Contém funções utilitárias que podem ser usadas em várias partes do aplicativo.
+  /controllers: Contém os controladores que lidam com as requisições HTTP e retornam respostas.
+
+  /infra: Contém a lógica de infraestrutura, como acesso ao banco de dados, integrações com serviços externos, etc.
+
+    /axios: Contem configuração padrão para as chamadas a apis
+    /database: Contém as configurações de conexão com banco de dados
+    /fakerApi: Contém as configurações de chamadas para o serviço terceiro
+    / gRPC: POr se tratar de uma api de microserviço o gRPC será usado para comunicação com outros microserviços
+
+  /dtos: Contém (DTOs) Data Transfer Object
+
+  /middleware: Contém funções de middleware que podem ser usadas para processar requisições antes de chegarem aos controladores.
+
+  /routes: Contém as definições de rotas, que mapeiam URLs para controladores específicos.
+
+  /validators: Para manter a lógica de validação separada dos controladores e modelos, especialmente se você estiver usando bibliotecas de validação como Joi ou express-validator.
+
+  /services: Contém a lógica de negócios que não se encaixa diretamente nos controladores ou modelos. Isso pode incluir operações complexas que envolvem múltiplos modelos ou serviços externos.
+
+  /utils: Contém funções utilitárias que podem ser usadas em várias partes do aplicativo.
 
 /test: Contém os testes unitários e de integração para o aplicativo.
 
-> ## Tarefas
+```
+
+> ## Desafio
 
 Teste Node.js v2
 
