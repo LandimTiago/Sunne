@@ -51,7 +51,11 @@
 
 > ## Typescript
 >
-> A escolha pelo uso do typescript se deu pela facilidade de tipagem e confiabilidade no codigo quando pronto.
+> A escolha pelo uso do typescript se deu pela facilidade de tipagem e confiabilidade no código quando pronto.
+
+> ### Autenticação
+
+Por se tratar de uma arquitetura de micro serviços a autenticação ficaria sob responsabilidade de uma api gateway ou api própria para autenticação. Com uma Api Gateway poderíamos expor apenas ela a internet mantendo as demais apis do sistema apenas com comunicação interna pelo gRPC ou outro método de comunicação via TCP
 
 > ## Desafio
 
